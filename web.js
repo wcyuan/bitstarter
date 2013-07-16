@@ -7,6 +7,10 @@ app.get('/', function(request, response) {
   response.send(fs.readFileSync('index.html').toString('utf-8'));
 });
 
+app.get('/index-final.html', function(request, response) {
+  response.send(fs.readFileSync('index-final.html').toString('utf-8'));
+});
+
 var port = process.env.PORT || 8080;
 app.listen(port, function() {
   console.log("Listening on " + port);
